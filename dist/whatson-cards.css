@@ -1,0 +1,44 @@
+/* Ender-inspired image-led cards and a continuous carousel, scoped to What's on. */
+#whats-on.whatson-carousel{--show-card:#171416;--show-ink:#eeeae2;--show-muted:#ac9b91;--show-line:#49332e;--show-hover:#f5f5f5;--show-hover-ink:#111;--show-hover-muted:#515151;--show-hover-line:#d2d2d2}
+html[data-theme=light] #whats-on.whatson-carousel{--show-card:#fff;--show-ink:#111;--show-muted:#6d6d6d;--show-line:#e2e2e2;--show-hover:#09090b;--show-hover-ink:#fff;--show-hover-muted:#c7c7c7;--show-hover-line:#414141}
+.whatson-viewport{position:relative;margin-top:34px;padding:12px 2px 18px;overflow-x:auto;overflow-y:hidden;scrollbar-width:none;overscroll-behavior-x:contain;cursor:grab;mask-image:none}
+.whatson-viewport::-webkit-scrollbar{display:none}.whatson-viewport.is-dragging{cursor:grabbing;user-select:none}
+.champ-page #whats-on ul.whatson-track{display:flex!important;align-items:stretch;gap:24px;width:max-content;max-width:none;margin:0!important;padding:0;list-style:none}
+.champ-page #whats-on ul.whatson-track>li{display:block;flex:0 0 370px;width:370px;max-width:none;min-width:0;grid-column:auto;grid-row:auto;align-self:stretch}
+.champ-page #whats-on ul.whatson-track>li[hidden]{display:none!important}
+.whatson-card{display:flex;flex-direction:column;height:100%;width:100%;padding:12px 12px 20px;border:1px solid var(--show-line);border-radius:16px;background:var(--show-card);color:var(--show-ink);text-decoration:none;overflow:hidden;transition:transform .35s cubic-bezier(.22,1,.36,1),box-shadow .35s}
+.whatson-card{position:relative;isolation:isolate}
+.whatson-card:before{content:'';position:absolute;inset:0;z-index:-1;background:var(--show-hover);transform:translateY(101%);transition:transform .55s cubic-bezier(.22,1,.36,1);border-radius:inherit}
+.whatson-card:hover,.whatson-card:focus-visible{--show-ink:var(--show-hover-ink);--show-muted:var(--show-hover-muted);--show-line:var(--show-hover-line);transform:translateY(-5px);box-shadow:0 12px 28px #0003}
+.whatson-card:hover:before,.whatson-card:focus-visible:before{transform:translateY(0)}
+.whatson-copy h3,.whatson-copy p,.whatson-copy .whatson-action{transition:color .35s,border-color .35s}
+.whatson-card:focus-visible{outline:2px solid #e44332;outline-offset:4px}
+.whatson-media{position:relative;display:grid;place-items:center;aspect-ratio:1.17;overflow:hidden;border-radius:12px;background:#f2efea;box-shadow:0 1px 7px #0002;isolation:isolate;color:#bd3122}
+html[data-theme=light] .whatson-media{background:#f4f4f4}
+.whatson-media>img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .65s cubic-bezier(.22,1,.36,1)}
+a.whatson-card:hover .whatson-media>img{transform:scale(1.045)}
+.whatson-card:not(a) .whatson-media{background:radial-gradient(circle at 50% 43%,#bd31220c,transparent 60%),#f4f1eb}
+html[data-theme=light] .whatson-card:not(a) .whatson-media{background:radial-gradient(circle at 50% 43%,#bd31220a,transparent 60%),#f7f7f7}
+.whatson-media>svg{position:relative;z-index:1;width:78px;height:78px;stroke-width:1.1;color:#bd3122;fill:none;transition:transform .55s cubic-bezier(.22,1,.36,1)}
+.whatson-card:hover .whatson-media>svg{transform:translateY(-5px) rotate(-4deg)}
+.whatson-orbit{position:absolute;inset:16%;border:1px solid #bd312224;border-radius:50%;transform:rotate(-25deg) scaleX(.7)}
+.whatson-orbit:after{content:'';position:absolute;inset:0;border:1px solid #bd312224;border-radius:50%;transform:rotate(80deg) scaleX(1.6)}
+.whatson-media .whatson-kind{position:absolute;top:15px;left:15px;z-index:2;padding:5px 8px;border:1px solid #bd312244;background:#fff9;color:#8e2d21;font:500 9px/1.2 EN3Mono,monospace;text-transform:uppercase;letter-spacing:.04em;border-radius:4px;backdrop-filter:blur(8px)}
+.whatson-media .whatson-edition{position:absolute;bottom:17px;left:18px;right:18px;z-index:1;font:500 12px/1 EN3Mono,monospace;text-transform:uppercase;letter-spacing:.1em;color:#8b574d}
+.whatson-media .whatson-status{position:absolute;bottom:14px;right:14px;z-index:2;padding:6px 9px;border-radius:999px;background:#fff;color:#333;font:500 10px/1.2 instrumentSans,Arial,sans-serif;box-shadow:0 2px 9px #0001}
+.whatson-media .whatson-status.is-open{background:#bd3122;color:#fff5ed}
+.whatson-copy{padding:17px 7px 0;display:flex;flex-direction:column;flex:1;gap:9px}
+.champ-page #whats-on .whatson-copy h3{font:600 28px/1.05 instrumentSans,Arial,sans-serif!important;text-transform:none!important;letter-spacing:-.055em;margin:0;color:var(--show-ink)}
+.whatson-copy p{font:400 13px/1.5 instrumentSans,Arial,sans-serif;color:var(--show-muted);margin:0;min-height:39px}
+.whatson-copy .whatson-action{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:auto;padding-top:10px;border-top:1px solid var(--show-line);font:500 10px/1.3 EN3Mono,monospace;color:var(--show-muted)}
+a.whatson-card .whatson-action{color:#e44332}
+.whatson-controls{display:flex;justify-content:space-between;align-items:center;gap:18px;margin-top:8px}
+.whatson-controls>p{font:500 10px/1.4 EN3Mono,monospace;color:var(--show-muted);margin:0}
+.whatson-buttons{display:flex;gap:8px;align-items:center}
+.whatson-buttons button{height:38px;min-width:38px;display:grid;place-items:center;border:1px solid var(--show-line);border-radius:999px;background:var(--show-card);color:var(--show-ink);cursor:pointer;font:400 22px/1 instrumentSans,Arial,sans-serif;padding:0 12px;transition:background .2s,color .2s}
+.whatson-buttons button[data-carousel-pause]{font:500 10px/1.2 EN3Mono,monospace}
+.whatson-buttons button:hover{background:#bd3122;color:#fff5ed}.whatson-buttons button:disabled{opacity:.35;cursor:default}
+.whatson-buttons button:focus-visible,.whatson-viewport:focus-visible{outline:2px solid #e44332;outline-offset:3px}
+@media(max-width:1100px){.champ-page #whats-on ul.whatson-track>li{flex-basis:340px;width:340px}}
+@media(max-width:800px){.champ-page #whats-on ul.whatson-track>li{flex-basis:min(340px,80vw);width:min(340px,80vw)}.whatson-controls>p{max-width:20ch}}
+html[data-motion=reduced] .whatson-card,html[data-motion=reduced] .whatson-card:before,html[data-motion=reduced] .whatson-media>img,html[data-motion=reduced] .whatson-media>svg{transition:none!important}

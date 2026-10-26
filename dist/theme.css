@@ -1,0 +1,140 @@
+/* Shared manual theme choice. EN3 red is unchanged in both modes. */
+.champ-nav:has(>.nav-theme){grid-template-columns:clamp(170px,17vw,230px) minmax(180px,1.05fr) minmax(112px,.8fr) minmax(95px,.7fr) minmax(160px,1fr) 44px 52px}
+.champ-nav .nav-theme{display:flex;align-items:center;justify-content:center;position:relative;width:44px;height:100%;padding:0;border:0;border-left:1px solid #49332e;background:#201a1c;color:#eeeae2;cursor:pointer;min-width:0}
+.nav-theme svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;transition:transform .3s}
+.nav-theme:hover svg{transform:rotate(18deg)}
+.nav-theme:focus-visible{outline:2px solid #e44332;outline-offset:-4px}
+.nav-theme .theme-moon{display:none}
+html[data-theme=light] .nav-theme .theme-sun{display:none}
+html[data-theme=light] .nav-theme .theme-moon{display:block}
+@media(max-width:1000px) and (min-width:801px){.champ-nav:has(>.nav-theme){grid-template-columns:150px minmax(155px,1fr) minmax(100px,.8fr) minmax(80px,.65fr) minmax(137px,1fr) 42px 44px}.champ-nav .nav-theme{width:42px}.champ-nav>a:not(.brand){padding-inline:10px;font-size:14px}}
+@media(max-width:800px){.champ-nav:has(>.nav-theme){grid-template-columns:repeat(6,minmax(0,1fr))}.champ-nav .nav-theme{position:absolute;right:0;bottom:0;width:42px;height:52px;z-index:2}.champ-nav .nav-partners{padding-right:48px!important}.nav-theme svg{width:18px;height:18px}}
+@media(max-width:430px){.champ-nav .nav-partners{font-size:11px!important;padding-left:8px!important}}
+:root:root:root:root:root:root[data-theme=light]{--paper:#f3efe7;--surface:#e8e2d8;--text:#171416;--ink:#171416;--text-secondary:#5d504b;--slate:#5d504b;--muted:#77675f;--border:#cab9af;--border-input:#a38b7f;--hairline:#d5c7bb;--accent-text:#a92b1f;--accent-500:#e44332;--accent-600:#bd3122;--accent-700:#9e2316;--on-accent:#fff5ed;--glass-bg:#f3efe7ed;--glass-bg-strong:#e8e2d8f5;--glass-border:#cab9af;color-scheme:light;background:#f3efe7}
+html[data-theme=light] body{background:#f3efe7;color:#171416}
+html[data-theme=light] .champ-nav{background:#f3efe7;color:#171416;border-bottom-color:#cab9af}
+html[data-theme=light] .champ-nav .brand.brand-unfolder,html[data-theme=light] .champ-nav .brand.brand-unfolder:hover{background:#f3efe7;color:#171416}
+html[data-theme=light] .brand-unfold-wordmark{color:#171416}
+html[data-theme=light] .brand-unfold-paper{background:#fffaf1}
+html[data-theme=light] .champ-nav .nav-location{background-color:#eee7dc;border-color:#d5c7bb}
+html[data-theme=light] .nav-location .location-marker .location-pin,html[data-theme=light] .nav-location .location-marker .location-pin circle{stroke:#171416}
+html[data-theme=light] .location-marker:before{border-color:#9e695a66}
+html[data-theme=light] .nav-clock .location-label time{color:#171416}
+html[data-theme=light] .champ-nav .nav-journal{background:#e5ddd2;color:#171416}
+html[data-theme=light] .champ-nav .nav-partners{background:#eee7dc;color:#171416;border-color:#d5c7bb}
+html[data-theme=light] .champ-nav .nav-tickets{background:#bd3122;color:#fff5ed}
+html[data-theme=light] .champ-nav .nav-theme{background:#e5ddd2;color:#171416;border-color:#cab9af}
+html[data-theme=light] .champ-nav>a:not(.brand):hover{background:#bd3122;color:#fff5ed}
+html[data-theme=light] .hero-statement,html[data-theme=light] .champ-mosaic,html[data-theme=light] .mosaic-caption{background:#f3efe7;color:#171416}
+html[data-theme=light] .mosaic-signal-panel{background-color:#eee7dc;background-image:repeating-linear-gradient(90deg,transparent 0 15px,#bd312222 15px 16px),repeating-linear-gradient(0deg,transparent 0 15px,#bd312222 15px 16px)}
+html[data-theme=light] .mosaic-type-panel{background:#e5d9ce}
+html[data-theme=light] .mosaic-type-panel:hover>strong{color:#171416}
+html[data-theme=light] .mosaic-design{border-color:#ba9e91}
+html[data-theme=light] .champ-story{border-color:#cab9af;background:#f7f3ed}
+html[data-theme=light] .champ-story>div{color:#171416}
+html[data-theme=light] .champ-page #whats-on .experience-filters button{color:#66554e}
+html[data-theme=light] .champ-page #whats-on .experience-filters button[aria-pressed=true]{color:#fff5ed}
+html[data-theme=light] .champ-page #whats-on .experience-filters button:hover{color:#171416}
+html[data-theme=light] .champ-page #whats-on .experience-filters button[aria-pressed=true]:hover{color:#fff5ed}
+html[data-theme=light] .champ-partner{background:#e44332;color:#fff5ed}
+html[data-theme=light] .champ-partner .champ-link{background:#171416;color:#fff5ed}
+html[data-theme=light] .champ-faq details{border-color:#cab9af}
+html[data-theme=light] .partner-original{background:#f3efe7;color:#171416}
+html[data-theme=light] .partner-original>section:first-child,html[data-theme=light] .partner-original #savings,html[data-theme=light] .partner-original #counter,html[data-theme=light] .partner-original #door{background:#eee7dc;color:#171416}
+html[data-theme=light] .partner-original [class~="text-white"],html[data-theme=light] .partner-original [class*="text-white/"]{color:#171416}
+html[data-theme=light] .partner-original [class*="bg-white/"]{background-color:#dfd4c8}
+html[data-theme=light] .partner-original [class*="border-white/"]{border-color:#c8b6aa}
+html[data-theme=light] .partner-original a[class*="bg-accent"],html[data-theme=light] .partner-original form button[type=submit]{color:#fff5ed}
+html[data-theme=light] .partner-original form{background:#f8f4ed;border-color:#cab9af}
+html[data-theme=light] .partner-original form label{color:#4f3e37}
+html[data-theme=light] .partner-original form input,html[data-theme=light] .partner-original form select,html[data-theme=light] .partner-original form textarea{background:#fffaf4;color:#171416;border-color:#b9a397}
+html[data-theme=light] .partner-original form .partner-local-note{color:#6e5c54}
+html[data-theme=light] .partner-original #what-you-get>section{border-color:#d5c7bb}
+html[data-theme=light] .editorial-heading,html[data-theme=light] .editorial-story,html[data-theme=light] .editorial-breadcrumb,html[data-theme=light] .editorial-related,html[data-theme=light] .editorial-reading aside,html[data-theme=light] .editorial-filters{border-color:#c8b6aa}
+html[data-theme=light] .editorial-copy h2 a{color:#171416}
+html[data-theme=light] .editorial-copy h2 a:hover{color:#bd3122}
+html[data-theme=light] .editorial-copy>p,html[data-theme=light] .editorial-date,html[data-theme=light] .editorial-breadcrumb,html[data-theme=light] .editorial-filters button,html[data-theme=light] .editorial-empty{color:#66554e}
+html[data-theme=light] .editorial-filters button[aria-pressed=true],html[data-theme=light] .editorial-filters button:hover{color:#fff5ed}
+html[data-theme=light] .editorial-body blockquote,html[data-theme=light] .editorial-table tr:nth-child(even){background:#e5ddd2;color:#171416}
+html[data-theme=light] .ticket-focused{background:#f3efe7;color:#171416}
+html[data-theme=light] .ticket-panel-brand{color:#171416}
+html[data-theme=light] .ticket-description,html[data-theme=light] .ticket-preview-note,html[data-theme=light] .ticket-legal,html[data-theme=light] .ticket-change-number{color:#66554e}
+html[data-theme=light] .ticket-number,html[data-theme=light] .ticket-functional-stage .ticket-code,html[data-theme=light] .ticket-verification{background:#fffaf4;color:#171416;border-color:#b9a397}
+html[data-theme=light] .ticket-number input{color:#171416}
+html[data-theme=light] .ticket-number>span,html[data-theme=light] .ticket-verification small{color:#776157}
+html[data-theme=light] .ticket-error{color:#a92b1f}
+html[data-theme=light] .ticket-continue:disabled{background:#e4b4aa;color:#71362d}
+html[data-theme=light] .ticket-verification svg{stroke:#776157}
+html[data-theme=light] .local-notice,html[data-theme=light] .local-fields input,html[data-theme=light] .local-fields select,html[data-theme=light] .local-option{background:#e8e2d8;color:#171416;border-color:#cab9af}
+html[data-theme=light] .local-toast{background:#eee7dc;color:#171416}
+html[data-theme=light] .champ-page footer.en3-footer{background:#eee7dc;color:#171416;--off-white:#eee7dc}
+html[data-theme=light] .en3-footer .grid,html[data-theme=light] .en3-footer .cell,html[data-theme=light] .en3-footer .bar{border-color:#c8b6aa}
+html[data-theme=light] .en3-footer .label,html[data-theme=light] .en3-footer .bar,html[data-theme=light] .en3-footer .footer-company-details p{color:#6e5c54}
+html[data-theme=light] .en3-footer .en3-footer-identity{background:#bd3122}
+html[data-theme=light] .en3-footer a{color:inherit}
+html[data-theme=light] .en3-footer .top:hover{color:#171416}
+html[data-theme=light] .en3-footer .en3-footer-logo-tile,html[data-theme=light] .en3-footer .en3-footer-source-stamp{color:#eeeae2}
+html[data-theme=light] .en3-footer .en3-footer-brand{color:#171416}
+html[data-theme=light] .resource-grid a,html[data-theme=light] .resource-search{background:#f8f4ed;color:#171416}
+html[data-theme=light] .champ-page .org-rule{background:#bd3122}
+
+/* The location is compact; all navigation controls stay on a single row. */
+.champ-nav:has(>.nav-theme){grid-template-columns:clamp(150px,16vw,210px) clamp(145px,15vw,180px) minmax(104px,.85fr) minmax(88px,.75fr) minmax(158px,1.1fr) 44px 52px}
+.champ-page .champ-nav .nav-location{grid-template-columns:30px minmax(0,1fr);gap:8px!important;padding:10px!important}
+.champ-nav .nav-clock .location-label{font-size:12px}
+.champ-nav .nav-clock .location-label time{font-size:10px}
+.champ-nav .location-marker{width:30px;height:36px}
+.champ-nav .nav-location:after{left:46px}
+html[data-theme=light] .brand-unfolder.is-ticket .brand-unfold-paper{background:#171416}
+html[data-theme=light] .brand-unfolder.is-ticket .brand-unfold-wordmark{color:#eeeae2}
+html[data-theme=light] .brand-unfold-stub{color:#eeeae2;border-left-color:#b8a493}
+html[data-theme=light] .en3-footer .en3-footer-stamp-cell{background:#bd3122}
+@media(max-width:1000px) and (min-width:801px){.champ-nav:has(>.nav-theme){grid-template-columns:140px 140px minmax(90px,.8fr) minmax(76px,.65fr) minmax(140px,1fr) 42px 44px}.champ-nav .nav-clock .location-label{font-size:11px}.champ-nav .nav-clock .location-label time{font-size:9px}}
+@media(max-width:800px){
+ :root{--en3-nav-height:64px}
+ .champ-nav:has(>.nav-theme){height:64px;grid-template-columns:minmax(0,.95fr) minmax(0,.95fr) minmax(0,.65fr) minmax(0,.65fr) minmax(0,.9fr) 34px 34px;grid-template-rows:64px}
+ .champ-nav:has(>.nav-theme)>a,.champ-nav:has(>.nav-theme)>div,.champ-nav:has(>.nav-theme)>button{grid-column:auto!important;grid-row:1!important;position:static!important;margin:0!important;width:auto;height:100%;justify-self:stretch;min-width:0}
+ .champ-page .champ-nav .nav-location{grid-template-columns:14px minmax(0,1fr);gap:2px!important;padding:4px!important;margin:0!important}
+ .champ-nav .location-marker{width:14px;height:22px}
+ .champ-nav .nav-location .location-marker .location-pin{width:11px;height:16px}
+ .champ-nav .nav-clock .location-label{font-size:8px}
+ .champ-nav .nav-clock .location-label time{font-size:7px;white-space:normal;display:flex;flex-wrap:wrap;justify-content:flex-end;gap:1px}
+ .champ-nav .nav-location:after{display:none}
+ .champ-nav>a:not(.brand){padding:8px 5px!important;font-size:11px!important;border-top:0}
+ .champ-nav .nav-num{font-size:7px}
+ .champ-nav .nav-partners>span:last-child,.champ-nav .nav-journal>span:last-child,.champ-nav .nav-tickets>span:last-child{display:none}
+ .champ-nav .nav-menu{padding:0;font-size:24px}
+ .champ-nav .nav-theme{padding:0}
+ .champ-menu{top:64px}
+ .scroll-progress{top:61px}
+}
+@media(max-width:600px){
+ .champ-nav:has(>.nav-theme){grid-template-columns:minmax(0,.9fr) minmax(0,.85fr) minmax(0,.6fr) minmax(0,.65fr) minmax(0,.8fr) 30px 30px}
+ .champ-nav .nav-num{display:none}
+ .champ-nav .nav-tickets>span:first-child,.champ-nav .nav-partners>span:first-child{font-size:0}
+ .champ-nav .nav-tickets>span:first-child:after{content:'Tickets';font:500 10px/1.1 Champ;text-transform:uppercase}
+ .champ-nav .nav-partners>span:first-child:after{content:'Partners';font:500 10px/1.1 Champ;text-transform:uppercase}
+ .champ-nav .nav-journal{font-size:10px!important}
+ .champ-nav .nav-clock .location-label{font-size:7px}
+ .champ-nav .nav-clock .location-label time{font-size:6px}
+ .champ-nav .location-marker{width:12px}
+ .champ-page .champ-nav .nav-location{grid-template-columns:12px minmax(0,1fr);padding:3px!important}
+ .nav-theme svg{width:16px;height:16px}
+}
+
+/* Plain location card, with a readable article palette in light mode. */
+.champ-page .champ-nav .nav-location{background-image:none!important}
+.champ-nav .nav-location:after{content:none}
+html[data-theme=light] .editorial-body{color:#352d29}
+html[data-theme=light] .editorial-body :is(p,li,td,strong,b,em,h2,h3){color:#352d29!important}
+html[data-theme=light] .editorial-body :is(h2,h3){color:#171416!important}
+html[data-theme=light] .editorial-body a{color:#a92b1f!important}
+html[data-theme=light] .editorial-table th{color:#fff5ed!important}
+html[data-theme=light] .editorial-article-head>p{color:#66554e}
+
+/* Restore the location card's presence by sharing space with the three page links. */
+@media(min-width:1001px){.champ-nav:has(>.nav-theme){grid-template-columns:clamp(150px,16vw,210px) clamp(205px,22vw,280px) minmax(104px,.85fr) minmax(88px,.75fr) minmax(158px,1.1fr) 44px 52px}.champ-page .champ-nav .nav-location{grid-template-columns:38px minmax(0,1fr);gap:12px!important;padding:10px 16px!important}.champ-nav .nav-clock .location-label{font-size:14px}.champ-nav .nav-clock .location-label time{font-size:12px}.champ-nav .location-marker{width:38px;height:40px}.nav-location .location-marker .location-pin{width:21px;height:26px}}
+@media(max-width:1000px) and (min-width:801px){.champ-nav:has(>.nav-theme){grid-template-columns:140px 190px minmax(85px,.8fr) minmax(75px,.65fr) minmax(133px,1fr) 42px 44px}.champ-nav .nav-clock .location-label{font-size:12px}.champ-nav .nav-clock .location-label time{font-size:10px}}
+
+html[data-theme=light] .partner-original .partner-comparison .partner-comparison-track{background:#c9b7a7;border-color:#b19a88}
+html[data-theme=light] .partner-original .partner-comparison{background:#e2d7ca}

@@ -1,0 +1,15 @@
+/* BookMyShow reference: centred 1240px content rows, 32px minimum side gutters. */
+:root{--en3-content-max:1240px;--en3-page-gutter:max(32px,calc((100vw - var(--en3-content-max))/2));--en3-section-gap:64px}
+.champ-page main>#whats-on{max-width:none;width:auto;margin:0;padding:var(--en3-section-gap) var(--en3-page-gutter)}
+.champ-page .champ-journal{max-width:none;margin:0;padding:var(--en3-section-gap) var(--en3-page-gutter)}
+.champ-page .champ-partner{padding:var(--en3-section-gap) var(--en3-page-gutter)}
+.champ-page .champ-faq{max-width:none;margin:0;padding:var(--en3-section-gap) var(--en3-page-gutter)}
+.champ-page .champ-story-grid{gap:24px}
+.champ-page .champ-journal{margin-top:clamp(48px,8svh,80px)}
+.champ-page .partner-original>section>div[class~="mx-auto"],.champ-page .partner-original #what-you-get>section>div[class~="mx-auto"]{max-width:none;margin-inline:0;padding-inline:var(--en3-page-gutter);padding-block:var(--en3-section-gap)}
+.champ-page .partner-original>section[class~="mx-auto"]{max-width:none;margin-inline:0;padding-inline:var(--en3-page-gutter)}
+.champ-page .partner-original #get-your-page{padding-block:var(--en3-section-gap)}
+.champ-page main.editorial-index,.champ-page main.editorial-article{max-width:none;margin-inline:0;padding-inline:var(--en3-page-gutter)}
+.champ-page main.champ-gallery,.champ-page main.champ-resources{max-width:none;margin-inline:0;padding-inline:var(--en3-page-gutter)}
+/* Edge-to-edge hero, navbar, moving strip and footer retain their approved composition. */
+@media(max-width:800px){:root{--en3-page-gutter:24px;--en3-section-gap:48px}}

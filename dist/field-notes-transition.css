@@ -1,0 +1,6 @@
+/* Concentric wipe over the existing content: no pinned intro or added scroll space. */
+.field-notes-wipe{position:fixed;top:var(--en3-nav-height,68px);left:0;right:0;bottom:0;pointer-events:none;z-index:70;overflow:hidden;isolation:isolate}
+.field-notes-wipe[hidden]{display:none}
+.field-notes-wipe i{position:absolute;display:block;left:50%;bottom:0;width:var(--ring-diameter,2400px);height:var(--ring-diameter,2400px);border-radius:50%;transform-origin:center;transform:translate3d(-50%,50%,0) scale(0);will-change:transform;backface-visibility:hidden}
+.field-notes-wipe i:nth-child(1){background:#0b0b0f}.field-notes-wipe i:nth-child(2){background:#e44332}.field-notes-wipe i:nth-child(3){background:#eeeae2}.field-notes-wipe i:nth-child(4){background:#78251c}.field-notes-wipe i:nth-child(5){background:#eea18d}.field-notes-wipe i:nth-child(6){background:#bd3122}
+html[data-motion=reduced] .field-notes-wipe{display:none!important}

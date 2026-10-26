@@ -1,0 +1,48 @@
+/* Homepage right-hand artwork only. All ticket details are fictional. */
+.hero-word-window{display:inline-block;position:relative;height:1.05em;line-height:1.05;vertical-align:bottom;overflow:hidden}
+.hero-word-sizer{visibility:hidden}
+.hero-word-track{position:absolute;left:0;top:0;display:flex;flex-direction:column;animation:en3-hero-words 7.5s cubic-bezier(.65,0,.2,1) infinite;will-change:transform}
+.hero-word-track>span{display:block;height:1.05em;line-height:1.05;flex:none;white-space:nowrap}
+@keyframes en3-hero-words{0%,26.66%{transform:translateY(0)}33.33%,60%{transform:translateY(-25%)}66.66%,93.33%{transform:translateY(-50%)}100%{transform:translateY(-75%)}}
+html.en3-font-loading .hero-word-track{animation-play-state:paused}
+html[data-motion=reduced] .hero-word-track{animation:none!important;transform:none;will-change:auto}
+.en3-ticket-scene{--ticket-paper:#eee8dc;--ticket-ink:#171414;--ticket-red:#bd3122;position:relative;isolation:isolate;container-type:size;min-width:0;min-height:0;height:100%;overflow:hidden;background:#101012;color:#eee8dc;border:0}
+html[data-theme=light] .en3-ticket-scene{background:#f5f5f5;color:#171414}
+.ticket-scene-label,.ticket-scene-caption{display:none}
+.ticket-scene-label{top:24px}.ticket-scene-label span:first-child:before{content:'';display:inline-block;width:6px;height:6px;margin-right:8px;background:#e44332;border-radius:50%}
+.ticket-scene-caption{bottom:23px;opacity:.7}.ticket-scene-caption span:last-child{letter-spacing:.18em}
+.en3-experience-ticket{--ticket-x:0%;--ticket-y:26px;--ticket-angle:-3deg;--ticket-scale:1;position:absolute;left:50%;top:49%;width:min(48cqw,48cqh);aspect-ratio: .635;display:flex;flex-direction:column;background:var(--ticket-paper);color:var(--ticket-ink);border:1px solid #17141422;border-radius:10px;box-shadow:0 20px 35px -12px #0007,0 2px 4px #0002;transform:translate(-50%,-50%) translate(var(--ticket-x),var(--ticket-y)) rotate(var(--ticket-angle)) scale(var(--ticket-scale));transform-origin:center;animation:en3-ticket-arrive 1.7s .2s cubic-bezier(.22,1,.36,1) both;z-index:3;overflow:hidden}
+.en3-experience-ticket.ticket-safari{--ticket-x:-53%;--ticket-y:-43px;--ticket-angle:-13deg;--ticket-scale:.91;animation-delay:.36s;z-index:1}
+.en3-experience-ticket.ticket-theatre{--ticket-x:53%;--ticket-y:-17px;--ticket-angle:12deg;--ticket-scale:.91;animation-delay:.52s;z-index:2}
+.ticket-brandline{display:flex;justify-content:space-between;align-items:center;padding:10px 12px;flex:none;gap:8px;border-bottom:1px solid #17141418}
+.ticket-brand{display:flex;align-items:center;gap:5px;font:700 14px/1 Champ,sans-serif;letter-spacing:-.02em}.ticket-brand img{width:19px;height:19px}.ticket-brandline>span{font:500 7px/1.2 EN3Mono,monospace;letter-spacing:.07em}
+.ticket-poster{position:relative;flex:1;min-height:0;margin:7px 7px 0;overflow:hidden;background:#bd3122;color:#eee8dc}
+.ticket-poster h2{position:absolute;z-index:2;top:14px;left:14px;right:14px;font:700 clamp(25px,5.6cqw,44px)/.9 Champ,sans-serif;letter-spacing:-.025em;margin:0;text-transform:uppercase;color:inherit}
+.ticket-poster .poster-edition{position:absolute;bottom:12px;left:13px;right:13px;z-index:2;display:flex;justify-content:space-between;font:500 7px/1.4 EN3Mono,monospace;letter-spacing:.08em;text-transform:uppercase}
+.ticket-poster>svg,.ticket-poster>.safari-landscape{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.safari-landscape{filter:grayscale(1) contrast(1.2);mix-blend-mode:multiply;opacity:.85}
+.ticket-safari .ticket-poster:after{content:'';position:absolute;inset:0;background:linear-gradient(#17141488,transparent 50%,#171414cc)}
+.ticket-safari .safari-sun{position:absolute;right:15%;top:34%;width:38%;aspect-ratio:1;border-radius:50%;background:#eee8dc;mix-blend-mode:screen;opacity:.8}
+.ticket-safari .ticket-poster-tiger{background:#df5946}
+.ticket-poster-tiger .safari-tiger{transform:scaleX(-1);filter:grayscale(1) contrast(1.1);mix-blend-mode:multiply;opacity:1;object-fit:cover;object-position:center}
+.ticket-poster-tiger:before{content:'';position:absolute;inset:0;background:#bd31222b;mix-blend-mode:multiply;pointer-events:none}
+.ticket-safari .ticket-poster-tiger:after{background:linear-gradient(#35090966,transparent 36%,transparent 65%,#350909bb)}
+.ticket-concert .ticket-poster{background:#bd3122}.ticket-concert .ticket-poster h2{font-size:clamp(30px,6.8cqw,52px);text-align:center;top:15px;line-height:.88}
+.ticket-concert .poster-edition{color:#eee8dc}
+/* Keep the supplied artwork intact, with a subtle printed-paper finish. */
+.ticket-concert .ticket-poster-veda{background:#dc2523;isolation:isolate}
+.veda-poster-art{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;display:block}
+.ticket-poster-veda:before{content:'';position:absolute;inset:0;z-index:1;pointer-events:none;background:radial-gradient(circle at 1px 1px,#25100c55 .45px,transparent .8px);background-size:3px 3px;mix-blend-mode:multiply;opacity:.22}
+.ticket-poster-veda:after{content:'';position:absolute;inset:0;z-index:2;pointer-events:none;background:linear-gradient(115deg,transparent 12%,#fff1d51c 31%,transparent 49%),linear-gradient(0deg,#2a080b25,transparent 26%,transparent 78%,#fff4da12);box-shadow:inset 0 0 18px #450b0925}
+.veda-print-frame{position:absolute;inset:7px;z-index:3;border:1px solid #ffe5ba35;pointer-events:none}
+.ticket-theatre .ticket-poster{background:#171414;color:#eee8dc}.ticket-theatre .ticket-poster h2{text-align:right}
+.ticket-stub{position:relative;flex:none;margin-top:8px;padding:10px 13px 11px;border-top:1px dashed #17141455;display:grid;grid-template-columns:1fr auto;gap:4px 8px}
+.ticket-stub:before,.ticket-stub:after{content:'';position:absolute;top:-6px;width:11px;height:11px;background:#101012;border-radius:50%}.ticket-stub:before{left:-6px}.ticket-stub:after{right:-6px}
+html[data-theme=light] .ticket-stub:before,html[data-theme=light] .ticket-stub:after{background:#f5f5f5}
+.ticket-stub strong{font:700 clamp(12px,2.8cqw,19px)/1.05 Champ,sans-serif;text-transform:uppercase;letter-spacing:-.01em;grid-column:1/-1}
+.ticket-stub time{font:500 8px/1.5 EN3Mono,monospace}.ticket-stub .ticket-venue{font:400 9px/1.4 instrumentSans,Arial,sans-serif;grid-column:1/-1}.ticket-stub .ticket-demo{font:500 6px/1.5 EN3Mono,monospace;letter-spacing:.04em;grid-column:1/-1;opacity:.65;margin-top:4px}
+.ticket-barcode{width:34px;height:15px;grid-column:2;grid-row:2;background:repeating-linear-gradient(90deg,#171414 0 1px,transparent 1px 3px,#171414 3px 5px,transparent 5px 6px);opacity:.75}
+@keyframes en3-ticket-arrive{0%{opacity:0;transform:translate(-50%,-30%) rotate(0deg) scale(.68)}28%{opacity:1;transform:translate(-50%,-50%) rotate(0deg) scale(.88)}78%{opacity:1;transform:translate(-50%,-50%) translate(calc(var(--ticket-x)*1.04),calc(var(--ticket-y)*1.04)) rotate(calc(var(--ticket-angle)*1.07)) scale(var(--ticket-scale))}100%{opacity:1;transform:translate(-50%,-50%) translate(var(--ticket-x),var(--ticket-y)) rotate(var(--ticket-angle)) scale(var(--ticket-scale))}}
+html.en3-font-loading .en3-experience-ticket{animation-play-state:paused}
+html[data-motion=reduced] .en3-experience-ticket{animation:none!important;opacity:1}
+@media(max-width:800px){.ticket-scene-label{top:10px}.ticket-scene-caption{bottom:8px}.ticket-scene-label,.ticket-scene-caption{left:16px;right:16px;font-size:6px}.en3-experience-ticket{width:min(38cqw,49cqh);--ticket-y:6px}.en3-experience-ticket.ticket-safari{--ticket-y:-9px}.en3-experience-ticket.ticket-theatre{--ticket-y:-2px}.ticket-brandline{padding:4px 6px}.ticket-brand{font-size:9px}.ticket-brand img{width:12px;height:12px}.ticket-brandline>span{font-size:4px}.ticket-poster{margin:3px 3px 0}.ticket-poster h2{font-size:18px;top:7px;left:6px;right:6px}.ticket-concert .ticket-poster h2{font-size:22px;top:7px}.ticket-stub{padding:4px 6px;margin-top:4px;gap:2px}.ticket-stub strong{font-size:9px}.ticket-stub time,.ticket-stub .ticket-venue{font-size:5px}.ticket-stub .ticket-demo{font-size:4px;margin-top:0}.ticket-poster .poster-edition{font-size:4px;bottom:5px;left:5px;right:5px}.ticket-barcode{width:18px;height:8px}}

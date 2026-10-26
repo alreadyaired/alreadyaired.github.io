@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" preserveAspectRatio="none">
+ <defs><mask id="ticket"><rect width="320" height="200" fill="white"/><g fill="black">
+  <circle r="18"/><circle cx="320" r="18"/><circle cy="200" r="18"/><circle cx="320" cy="200" r="18"/>
+  <circle cx="238" r="16"/><circle cx="238" cy="200" r="16"/>
+  <g id="perforation"><circle cy="35" r="5"/><circle cy="55" r="5"/><circle cy="75" r="5"/><circle cy="95" r="5"/><circle cy="115" r="5"/><circle cy="135" r="5"/><circle cy="155" r="5"/><circle cy="175" r="5"/></g>
+  <use href="#perforation" x="320"/>
+ </g></mask></defs>
+ <rect width="320" height="200" fill="white" mask="url(#ticket)"/>
+</svg>

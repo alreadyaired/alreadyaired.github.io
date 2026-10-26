@@ -1,0 +1,35 @@
+/* Dovv's #f5f5f5 white replaces the earlier cream light palette. EN3 red stays. */
+:root:root:root:root:root:root[data-theme=light]{--paper:#f5f5f5;--surface:#fff;--text:#111;--ink:#111;--text-secondary:#505050;--slate:#505050;--muted:#777;--border:#d5d5d5;--border-input:#aaa;--hairline:#dedede;--glass-bg:#f5f5f5ed;--glass-bg-strong:#fffffff5;--glass-border:#d5d5d5;background:#f5f5f5}
+html[data-theme=light] body{background:#f5f5f5;color:#111}
+html[data-theme=light] .champ-page .champ-nav{background:#f5f5f5;color:#111;border-color:#d8d8d8}
+html[data-theme=light] .champ-page .champ-nav .brand.brand-unfolder,html[data-theme=light] .champ-page .champ-nav .brand.brand-unfolder:hover,html[data-theme=light] .brand-unfold-shell{background:#f5f5f5}
+html[data-theme=light] .champ-page .champ-nav :is(.nav-location,.nav-partners){background-color:#f5f5f5;border-color:#d8d8d8}
+html[data-theme=light] .champ-page .champ-nav :is(.nav-journal,.nav-theme){background:#ededed;color:#111;border-color:#d8d8d8}
+html[data-theme=light] .champ-page :is(.hero-statement,.champ-mosaic,.mosaic-caption){background:#f5f5f5;color:#111}
+html[data-theme=light] .mosaic-signal-panel{background-color:#f5f5f5}
+html[data-theme=light] .mosaic-type-panel{background:#e8e8e8}
+html[data-theme=light] .champ-page .champ-story{background:#fff;border-color:#d8d8d8}
+html[data-theme=light] :is(.editorial-heading,.editorial-story,.editorial-breadcrumb,.editorial-related,.editorial-filters),html[data-theme=light] .editorial-reading aside{border-color:#d8d8d8}
+html[data-theme=light] .editorial-reading aside{background:#f0f0f0}
+html[data-theme=light] .editorial-body,html[data-theme=light] .editorial-body :is(p,li,td,strong,b,em,h2,h3){color:#222!important}
+html[data-theme=light] .editorial-body blockquote,html[data-theme=light] .editorial-table tr:nth-child(even){background:#ededed;color:#111}
+html[data-theme=light] .partner-original{background:#f5f5f5;color:#111;--partner-control:#fff;--partner-control-border:#bbb;--partner-control-text:#111;--partner-range-track:#d5d5d5}
+html[data-theme=light] .partner-original>section:first-child,html[data-theme=light] .partner-original :is(#savings,#counter,#door){background:#efefef;color:#111}
+html[data-theme=light] .partner-original [class*="bg-white/"]{background-color:#e8e8e8}
+html[data-theme=light] .partner-original .partner-range-field{background:#fff;border-color:#d6d6d6}
+html[data-theme=light] .partner-original .partner-range-value{background:#f0f0f0;border-color:#c6c6c6;color:#333}
+html[data-theme=light] .partner-original .partner-range-wrap{--range-empty:#d5d5d5}
+html[data-theme=light] .partner-original .partner-comparison{background:#fff;border-color:#d6d6d6;color:#111}
+html[data-theme=light] .partner-original .partner-comparison .partner-comparison-track{background:#e3e3e3;border-color:#c5c5c5}
+html[data-theme=light] .partner-original .partner-comparison-row[data-comparison=other] .partner-comparison-fill{background:#737373}
+html[data-theme=light] .partner-original .partner-hero-artboard:before{background:radial-gradient(ellipse at 40% 20%,#bd31220d,transparent 70%),#e9e9e9;border-color:#c8c8c8}
+html[data-theme=light] .partner-original #get-your-page form.partner-enquiry-form{background:#fff;border-color:#d5d5d5;--enquiry-ink:#111;--enquiry-line:#cfcfcf;--enquiry-muted:#777}
+html[data-theme=light] .partner-original .partner-enquiry-submit .partner-local-note{background:#ededed;color:#666}
+html[data-theme=light] .champ-page .ticket-focused{background:#f5f5f5;color:#111}
+html[data-theme=light] :is(.ticket-number,.ticket-functional-stage .ticket-code,.ticket-verification){background:#fff;color:#111;border-color:#bcbcbc}
+html[data-theme=light] :is(.local-notice,.local-fields input,.local-fields select,.local-option){background:#fff;color:#111;border-color:#ccc}
+html[data-theme=light] .champ-page footer.en3-footer{background:#f5f5f5;color:#111;--off-white:#f5f5f5}
+html[data-theme=light] .en3-footer :is(.grid,.cell,.bar){border-color:#d5d5d5}
+html[data-theme=light] .en3-footer .label,html[data-theme=light] .en3-footer .bar,html[data-theme=light] .en3-footer .footer-company-details p{color:#727272}
+html[data-theme=light] .champ-page .champ-faq details{border-color:#d5d5d5}
+html[data-theme=light] :is(.resource-grid a,.resource-search){background:#fff;color:#111;border-color:#ddd}

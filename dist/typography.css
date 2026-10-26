@@ -1,0 +1,13 @@
+/* Three consistent roles: Champ display, Geist Mono editorial/UI, Instrument Sans prose. */
+@font-face{font-family:EN3Mono;src:url('/assets/fonts/GeistMono-Medium-latin.woff2') format('woff2');font-weight:500;font-style:normal;font-display:block}
+.champ-story h3,.editorial-copy h2,.editorial-copy h2 a{font-family:EN3Mono,ui-monospace,monospace!important;font-weight:500;line-height:1.35;letter-spacing:-.045em;text-transform:none}
+.champ-story h3{font-size:clamp(19px,1.9vw,25px);margin:16px 0}
+.editorial-copy h2,.editorial-copy h2 a{font-size:25px}
+.editorial-featured .editorial-copy h2,.editorial-featured .editorial-copy h2 a{font-size:clamp(28px,3.4vw,42px)}
+.editorial-article-head h1{font-family:EN3Mono,ui-monospace,monospace!important;font-weight:500;font-size:clamp(33px,4.2vw,59px)!important;line-height:1.18;letter-spacing:-.055em;text-transform:none}
+.champ-page #whats-on .experience-filters button{font:500 12px/1.25 EN3Mono,ui-monospace,monospace;letter-spacing:-.025em;min-height:42px;padding-inline:14px}
+.champ-story small,.editorial-copy .champ-kicker,.editorial-date,.editorial-breadcrumb,.editorial-filters button{font-family:EN3Mono,ui-monospace,monospace!important;font-weight:500;font-size:10px;line-height:1.6;letter-spacing:-.025em}
+.editorial-body p,.editorial-body li,.champ-story p,.editorial-copy>p{font-family:instrumentSans,Arial,sans-serif!important;font-weight:400;letter-spacing:normal}
+@media(max-width:800px){.champ-story h3{font-size:20px}.editorial-copy h2,.editorial-copy h2 a{font-size:23px}.editorial-featured .editorial-copy h2,.editorial-featured .editorial-copy h2 a{font-size:30px}.editorial-article-head h1{font-size:clamp(30px,7vw,48px)!important}.champ-page #whats-on .experience-filters button{font-size:11px;padding-inline:12px}}
+
+.champ-page .editorial-article-head h1{text-transform:none}

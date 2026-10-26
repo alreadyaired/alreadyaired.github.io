@@ -1,0 +1,19 @@
+/* One-screen partner invitation and Chande-inspired circle strap, EN3 colours. */
+.champ-page .partner-with-strap{--strap-height:clamp(86px,17svh,142px);padding:clamp(24px,4svh,44px) var(--en3-page-gutter) 0;row-gap:clamp(18px,3svh,30px);overflow:hidden;scroll-margin-top:calc(var(--en3-nav-height,68px) - 80px)}
+.partner-with-strap .partner-circle-strap{grid-column:1/-1;height:var(--strap-height);margin-inline:calc(-1 * var(--en3-page-gutter));overflow:hidden;background:#e44332;border-top:1px dashed #ffffff60;display:flex;align-items:center}
+.partner-circle-track{display:flex;flex:none;align-items:center;width:max-content;transform:none}
+.partner-circle-track>span{display:block;flex:none;width:calc(var(--strap-height) * .7);height:calc(var(--strap-height) * .7);border-radius:50%;background:#111313}
+.partner-circle-track>span:nth-child(even){background:#f5f5f5}
+@keyframes partner-circles{to{transform:translate3d(-50%,0,0)}}
+html[data-motion=reduced] .partner-circle-track{animation:none;will-change:auto}
+@media(min-width:801px){
+ .champ-page .partner-with-strap{height:calc(100svh - var(--en3-nav-height,68px));min-height:0;box-sizing:border-box;grid-template-rows:auto minmax(0,1fr) var(--strap-height);align-items:start;column-gap:clamp(32px,5vw,70px)}
+ .partner-with-strap .partner-pitch{align-self:center}
+ .champ-page .partner-with-strap h2{font-size:clamp(46px,min(5.6vw,10svh),80px);line-height:1.03}
+ .partner-with-strap .partner-offer{align-self:center;gap:clamp(10px,2.1svh,20px)}
+ .champ-page .partner-with-strap .partner-intro{font-size:clamp(17px,1.6vw,22px);line-height:1.35}
+ .partner-with-strap .partner-pricing{padding-block:12px}
+ .partner-with-strap .partner-pricing strong{font-size:clamp(34px,5svh,48px)}
+ .champ-page .partner-with-strap .champ-link{padding:16px 20px;min-height:52px}
+ .champ-page .partner-with-strap .partner-conditions{font-size:12px;line-height:1.4}
+}

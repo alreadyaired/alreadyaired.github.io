@@ -1,0 +1,36 @@
+/* One continuous identity: the ticket unfolds around a fixed icon and wordmark. */
+.champ-nav .brand.brand-unfolder{position:relative;display:flex;align-items:center;justify-content:center;padding:0;background:#111113;color:#eeeae2;min-width:0;overflow:hidden}.champ-nav .brand.brand-unfolder:hover{background:#111113;color:#eeeae2}.brand-unfold-shell{position:relative;display:block;width:min(calc(100% - 16px),259px);aspect-ratio:37/8;container-type:inline-size;isolation:isolate}.brand-unfold-paper{position:absolute;inset:0;background:#eeeae2;clip-path:inset(0 100% 0 0);mask-image:radial-gradient(circle 4px at 61% 0,transparent 98%,#000),radial-gradient(circle 4px at 61% 100%,transparent 98%,#000);mask-composite:intersect;transition:clip-path .8s cubic-bezier(.22,1,.36,1) .12s;will-change:clip-path}.brand-unfolder.is-ticket .brand-unfold-paper{clip-path:inset(0);transition-delay:0s}.brand-unfold-identity{position:absolute;inset:0 auto 0 0;width:61%;display:flex;align-items:center;justify-content:center;gap:3cqw;padding:0 4cqw;color:#eeeae2;mix-blend-mode:difference;z-index:1;pointer-events:none}.brand-unfold-identity>.brand-mark{width:12cqw;height:12cqw;gap:1.5cqw;flex-shrink:0}.brand-unfold-wordmark{font:700 9.8cqw/1 Champ,Arial,sans-serif;letter-spacing:-.045em;white-space:nowrap}.brand-unfold-stub{position:absolute;inset:0 0 0 61%;display:flex;align-items:center;justify-content:center;text-align:center;padding:0 4cqw;border-left:1px dashed #8a776b;color:#101012;font:700 5.1cqw/.88 Champ,Arial,sans-serif;letter-spacing:-.035em;white-space:nowrap;opacity:0;clip-path:inset(0 100% 0 0);transform:translate3d(-9px,0,0);transition:opacity .18s ease,clip-path .25s ease,transform .25s ease;z-index:2;pointer-events:none}.brand-unfolder.is-ticket .brand-unfold-stub{opacity:1;clip-path:inset(0);transform:translate3d(0,0,0);transition-duration:.3s,.55s,.55s;transition-delay:.3s}.brand-unfolder:focus-visible{outline:2px solid #e44332;outline-offset:-3px}
+@media(max-width:800px){.champ-nav .brand.brand-unfolder{padding:0}.brand-unfold-shell{width:calc(100% - 10px)}.brand-unfold-paper{mask-image:radial-gradient(circle 2.5px at 61% 0,transparent 98%,#000),radial-gradient(circle 2.5px at 61% 100%,transparent 98%,#000)}.brand-unfold-identity>.brand-mark{width:12cqw;height:12cqw;gap:1.5cqw}}
+html[data-motion=reduced] .brand-unfold-paper,html[data-motion=reduced] .brand-unfold-stub{transition:none!important}
+/* The supplied red favicon stays red in both states; only the lettering blends. */
+.brand-unfold-identity{mix-blend-mode:normal;z-index:auto}.brand-unfold-identity>.brand-unfold-mark{position:relative;z-index:1;display:block;width:12cqw;height:12cqw;flex-shrink:0;object-fit:contain}.brand-unfold-wordmark{position:relative;z-index:1;mix-blend-mode:difference;color:#eeeae2}
+/* Use the whole compact logo cell; gently centre the identity between unfolds. */
+.brand-unfold-shell{width:calc(100% - 16px);max-width:none}
+.brand-unfold-identity{transform:translateX(31.9%);transition:transform .8s cubic-bezier(.22,1,.36,1)}
+.brand-unfolder.is-ticket .brand-unfold-identity{transform:translateX(0)}
+.brand-unfold-wordmark{mix-blend-mode:normal;color:#eeeae2;transition:color .25s .12s}
+.brand-unfolder.is-ticket .brand-unfold-wordmark{color:#101012}
+@media(max-width:800px){.champ-nav .brand.brand-unfolder{overflow:visible}.brand-unfold-shell{width:calc(100% - 8px)}.brand-unfold-wordmark{font-size:10cqw}}
+
+/* The full-size identity contracts as the ticket unfolds around it. */
+.brand-unfold-shell{width:calc(100% - 16px);height:calc(100% - 16px);aspect-ratio:auto}
+.brand-unfold-identity{width:100%;transform:none;padding:0 3cqw;gap:5cqw;transition:width .8s cubic-bezier(.22,1,.36,1),gap .8s cubic-bezier(.22,1,.36,1),padding .8s cubic-bezier(.22,1,.36,1)}
+.brand-unfold-identity>.brand-unfold-mark{width:20cqw;height:20cqw;transition:width .8s cubic-bezier(.22,1,.36,1),height .8s cubic-bezier(.22,1,.36,1)}
+.brand-unfold-wordmark{font-size:18cqw;transition:font-size .8s cubic-bezier(.22,1,.36,1),color .25s .12s}
+.brand-unfolder.is-ticket .brand-unfold-identity{width:61%;transform:none;gap:3cqw;padding:0 3cqw}
+.brand-unfolder.is-ticket .brand-unfold-mark{width:12cqw;height:12cqw}
+.brand-unfolder.is-ticket .brand-unfold-wordmark{font-size:9.8cqw}
+@media(max-width:800px){.brand-unfold-shell{width:calc(100% - 8px);height:calc(100% - 14px)}.brand-unfold-identity>.brand-unfold-mark{width:20cqw;height:20cqw}.brand-unfold-wordmark{font-size:18cqw}}
+
+/* Both directions share the same timing and easing: unfold/shrink, then fold/grow. */
+.brand-unfold-paper,.brand-unfolder.is-ticket .brand-unfold-paper{transition:clip-path .8s cubic-bezier(.22,1,.36,1);transition-delay:0s}
+.brand-unfold-stub,.brand-unfolder.is-ticket .brand-unfold-stub{transition:opacity .65s cubic-bezier(.22,1,.36,1),clip-path .8s cubic-bezier(.22,1,.36,1),transform .8s cubic-bezier(.22,1,.36,1);transition-delay:0s}
+
+/* Keep lettering legible during the entire fold in either theme.
+   The compact ticket and the full identity deliberately use opposite ink. */
+.brand-unfold-shell{background:#111113}
+.brand-unfold-wordmark{mix-blend-mode:normal;color:#eeeae2!important;transition:font-size .8s cubic-bezier(.22,1,.36,1)}
+.brand-unfolder.is-ticket .brand-unfold-wordmark{color:#101012!important}
+html[data-theme=light] .brand-unfold-shell{background:#f5f5f5}
+html[data-theme=light] .brand-unfold-wordmark{color:#111!important}
+html[data-theme=light] .brand-unfolder.is-ticket .brand-unfold-wordmark{color:#eeeae2!important}
